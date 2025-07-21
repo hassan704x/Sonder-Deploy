@@ -94,21 +94,21 @@ const HeaderSlider = () => {
                 <div className=" absolute  inset-0 bg-gradient-to-r from-[#f7f7f7ea] via-40% to-transparent z-10">
                     <div className="flex items-center h-full px-8 md:px-16 lg:px-20 absolute top-[-60]">
                         <div className="max-w-2xl">
-                            <h1 className="text-[72px] leading-[1] tracking-[0.15px] font-serif font-[500] text-[#073836] mb-4">
+                            <h1 className="text-[48px] md:text-[72px] leading-[1] tracking-[0.15px] font-serif font-[500] text-[#073836] mb-4">
                                 A better way<br></br>
                                 to stay
 
                             </h1>
-                            <p className=" font-sans text-[18px]  text-[#073836] font-[300] my-4 mb-8 leading-relaxed max-w-xl">
-                                A choice of stays in the cities you love,<br></br> powered by an
-                                app that puts you in<br></br> control. Now part of Marriott Bonvoy
+                            <p className=" font-sans text-[16px] md:text-[18px]  text-[#073836] font-[300] my-4 mb-8 leading-relaxed max-w-xl">
+                                A choice of stays in the cities you love,<br className="hidden md:block"></br> powered by an
+                                app that puts you in<br className="hidden md:block"></br> control. Now part of Marriott Bonvoy
                             </p>
                         </div>
                     </div>
 
                     {/* Caption Overlay - Now inside gradient layer */}
-                    <div className="absolute bottom-40 left-13 right-0 to-transparent p-6">
-                        <h3 className="text-[#073836] text-[16px] font-[300] flex flex-row items-center gap-2"><IoLocationOutline
+                    <div className="absolute bottom-20 left-13 right-0 to-transparent p-6">
+                        <h3 className="text-[#073836] text-[14px] md:text-[16px] font-[300] flex flex-row items-center gap-2"><IoLocationOutline
                             size={20} />{images[currentIndex].captions}</h3>
                     </div>
                 </div>

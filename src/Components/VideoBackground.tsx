@@ -23,8 +23,8 @@ const VideoBackground = () => {
                     <h1 className="font-serif text-3xl md:text-4xl lg:text-5xl font-light mb-6 leading-tight">
                         A stay you can count on
                     </h1>
-                    <p className="text-[20px] md:text-xl opacity-90 leading-relaxed font-[500]">
-                        Every Sonder is unique and every stay is special. Our<br></br> standard remains the same — designer details, keyless<br></br> entry, fast, free WiFi, and 24/7 digital concierge.
+                    <p className="text-[18px] md:text-[20px] opacity-90 leading-relaxed font-[500]">
+                        Every Sonder is unique and every stay is special. Our<br className="hidden md:block"></br> standard remains the same — designer details, keyless<br className="hidden md:block"></br> entry, fast, free WiFi, and 24/7 digital concierge.
                     </p>
                 </div>
             </div>

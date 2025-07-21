@@ -68,11 +68,11 @@ const TestimonialCarousel = () => {
   return (
     <div className="w-full 7xl mx-auto px-4 py-16 bg" >
       {/* Header */}
-      <div className="mb-12 ml-20">
-        <h2 className="text-4xl md:text-5xl font-serif text-[#073836] mb-4">
+      <div className="mb-12 ml-6 md:ml-20">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-[#073836] mb-4">
           Every stay has a story
         </h2>
-        <p className="text-lg text-gray-600 max-w-2xl">
+        <p className="text-base md:text-lg text-gray-600 max-w-2xl">
           But don`t just take our word for it — see what our guests have to say.
         </p>
       </div>
@@ -80,29 +80,29 @@ const TestimonialCarousel = () => {
       {/* Carousel */}
       <div className="relative overflow-hidden">
         {/* White gradient overlays for fade effect */}
-        <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
-        <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute left-0 top-0 w-16 md:w-32 h-full bg-gradient-to-r from-white to-transparent z-20 pointer-events-none"></div>
+        <div className="absolute right-0 top-0 w-16 md:w-32 h-full bg-gradient-to-l from-white to-transparent z-20 pointer-events-none"></div>
         
         {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow"
+          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow"
           aria-label="Previous testimonial"
         >
-          <ChevronLeft className="w-6 h-6 text-gray-600" />
+          <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow"
+          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 w-10 h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-shadow"
           aria-label="Next testimonial"
         >
-          <ChevronRight className="w-6 h-6 text-gray-600" />
+          <ChevronRight className="w-5 h-5 md:w-6 md:h-6 text-gray-600" />
         </button>
 
         {/* Testimonial Cards */}
         <div 
-          className="flex transition-transform duration-500 ease-in-out gap-8 px-16"
+          className="flex transition-transform duration-500 ease-in-out gap-4 md:gap-8 px-8 md:px-16"
           style={{
             transform: `translateX(-${currentSlide * (100 / 2.5)}%)`,
             width: `${(testimonials.length * 100) / 2.5}%`
@@ -111,20 +111,20 @@ const TestimonialCarousel = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className={`${testimonial.bgColor} ${testimonial.roundedCorner} p-10 h-96 flex flex-col justify-between transition-all duration-500 flex-shrink-0`}
-              style={{ width: `${100 / testimonials.length}%`, minWidth: '400px' }}
+              className={`${testimonial.bgColor} ${testimonial.roundedCorner} p-6 md:p-10 h-80 md:h-96 flex flex-col justify-between transition-all duration-500 flex-shrink-0`}
+              style={{ width: `${100 / testimonials.length}%`, minWidth: '300px' }}
             >
               <div>
-                <p className="text-xl md:text-2xl leading-relaxed text-gray-800 font-medium">
+                <p className="text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-800 font-medium">
                   {testimonial.text}
                 </p>
               </div>
               
               <div className="mt-6">
-                <p className="font-semibold text-gray-800 text-xl">
+                <p className="font-semibold text-gray-800 text-lg md:text-xl">
                   {testimonial.author}
                 </p>
-                <p className="text-gray-600 text-lg">
+                <p className="text-gray-600 text-base md:text-lg">
                   {testimonial.location}
                 </p>
               </div>

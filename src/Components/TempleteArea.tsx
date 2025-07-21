@@ -9,14 +9,14 @@ const TemplateArea = () => {
     return (
         <div>
             <section className="bg-[#eaece2] relative overflow-hidden">
-                <div className="flex flex-row min-h-screen">
+                <div className="flex flex-col lg:flex-row min-h-screen">
                     {/* Left Content Area */}
                     <div className="flex-1 p-8 lg:p-12 max-w-2xl">
                         <div className="pt-12 pb-8">
-                            <h1 className="text-4xl lg:text-5xl text-teal-900 font-serif leading-tight mb-6">
+                            <h1 className="text-3xl md:text-4xl lg:text-5xl text-teal-900 font-serif leading-tight mb-6">
                                 Everything you need is just a tap away
                             </h1>
-                            <p className="text-lg text-teal-900 leading-relaxed max-w-md">
+                            <p className="text-base md:text-lg text-teal-900 leading-relaxed max-w-md">
                                 Customize your stay or connect with our digital concierge. The Sonder app puts you in control.
                             </p>
                         </div>
@@ -70,8 +70,9 @@ const TemplateArea = () => {
                                 <Image
                                     src="/assets/mob-temp.png"
                                     alt="mockup"
-                                    width={800}
-                                    height={850}
+                                    width={600}
+                                    height={650}
+                                    className="md:w-[700px] md:h-[750px] lg:w-[800px] lg:h-[850px]"
                                 />
                             </div>
 
@@ -96,8 +97,8 @@ const TemplateArea = () => {
                     <div className="">
                         <div className=" py-8 pt-20">
                             <div className='border-t border-teal-900 border-opacity-20 w-[70%] mx-auto' />
-                        <div className="flex justify-center items-center gap-22 flex-wrap pb-8 pt-12">
-                            <div className="relative w-25 h-31">
+                        <div className="flex justify-center items-center gap-8 md:gap-22 flex-wrap pb-8 pt-12">
+                            <div className="relative w-20 md:w-25 h-24 md:h-31">
                                 <Image
                                     src="/assets/reviews.png"
                                     alt="TripAdvisor reviews"
@@ -105,7 +106,7 @@ const TemplateArea = () => {
                                     className="object-contain opacity-80"
                                 />
                             </div>
-                            <div className="relative w-20 h-16">
+                            <div className="relative w-16 md:w-20 h-12 md:h-16">
                                 <Image
                                     src="/assets/google.png"
                                     alt="Google reviews"
@@ -113,7 +114,7 @@ const TemplateArea = () => {
                                     className="object-contain opacity-80"
                                 />
                             </div>
-                            <div className="relative w-20 h-16">
+                            <div className="relative w-16 md:w-20 h-12 md:h-16">
                                 <Image
                                     src="/assets/3rd review.png"
                                     alt="Other reviews"
@@ -130,7 +131,7 @@ const TemplateArea = () => {
             {/* Marriott Bonvoy Section */}
            <section className="py-12 px-8">
                 <div className="max-w-6xl mx-auto">
-                    <div className="flex flex-row items-center justify-center gap-8 bg-[#eaece2] rounded-3xl p-8">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-8 bg-[#eaece2] rounded-3xl p-8">
                         <div className=" flex items-center justify-center">
                             <div className=" w-24 h-24">
                                 <Image
@@ -143,7 +144,7 @@ const TemplateArea = () => {
                             </div>
                         </div>
                         <div className="flex-1 text-center lg:text-left">
-                            <h3 className="font-serif text-xl lg:text-2xl font-medium text-teal-900 whitespace-nowrap">
+                            <h3 className="font-serif text-lg md:text-xl lg:text-2xl font-medium text-teal-900 whitespace-normal md:whitespace-nowrap">
                                 Join Marriott Bonvoy<sup>®</sup> and earn points toward free nights for your stays.
                             </h3>
                         </div>

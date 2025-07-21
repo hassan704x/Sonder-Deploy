@@ -25,7 +25,7 @@ const HeaderTop = () => {
     <div className="sticky top-0 z-50 bg-white shadow-md">
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-row items-center min-h-[35px] bg-white m-3 gap-6 ml-10">
-          <Image src="/assets/Logo.png" width={124} height={124} alt="Logo" />
+          <Image src="/assets/Logo.png" width={124} height={124} alt="Logo" className="ml-10" />
           
           
           <div className={`relative transition-all duration-300 ${
@@ -52,8 +52,7 @@ const HeaderTop = () => {
                
         <div className="flex flex-row items-center gap-2 mr-10">
           <div className="hover:bg-orange-100 rounded-full hidden md:block">
-            <select className="text-gray-900 text-[18px] appearance-none border-none bg-transparent py-2 px-5 rounded-full focus:outline-none cursor-pointer"
-              name="currency"
+            <select className="text-gray-900 text-[18px] appearance-none border-none bg-transparent py-2 px-5 rounded-full focus:outline-none cursor-pointer" name="currency"
               id="currency"
             >
               <option value="USD ($)">USD ($)</option>

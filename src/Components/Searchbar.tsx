@@ -65,10 +65,10 @@ const HotelSearchComponent = () => {
   return (
     <div className="absolute top-133 left-1/2 transform -translate-x-1/2 w-full max-w-6xl z-50 bg-white py-8 px-5 rounded-full">
       <div className="rounded-full shadow-lg border-2 border-[#b8b7b7] p-6 bg-[#fcf5eb] hover:bg-white hover:bg-opacity-70 transition-colors duration-200">
-        <div className="flex items-stretch gap-0 divide-x divide-gray-200 h-6">
+        <div className="flex flex-col md:flex-row md:items-stretch gap-4 md:gap-0 md:divide-x md:divide-gray-200 h-auto md:h-6">
           {/* City Selection */}
           <div className="relative flex-1 min-w-0 h-full flex items-center">
-            <div className="relative">
+            <div className="relative w-full">
               <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[#777777]">
                 <MapPin size={20} />
               </div>
@@ -103,20 +103,20 @@ const HotelSearchComponent = () => {
           </div>
 
           {/* Date Selection */}
-          <div className="relative flex-1 min-w-0 px-4 h-full flex items-center hover:bg-white hover:bg-opacity-70 transition-colors duration-200">
+          <div className="relative flex-1 min-w-0 md:px-4 h-full flex items-center hover:bg-white hover:bg-opacity-70 transition-colors duration-200">
             <div
               className="flex items-center gap-3 w-full cursor-pointer py-3"
               onClick={() => setShowDatePicker(!showDatePicker)}
             >
               <Calendar size={20} className="text-gray-400" />
-              <div className="flex items-center gap-2">
+              <div className="flex flex-col md:flex-row md:items-center gap-2">
                 <div className="flex flex-col">
                   <span className="text-xs text-gray-500">Check-in</span>
                   <span className="text-gray-800 font-medium text-base">
                     {checkIn ? formatDate(checkIn) : ""}
                   </span>
                 </div>
-                <ArrowRight size={16} className="text-gray-400 mx-2" />
+                <ArrowRight size={16} className="text-gray-400 mx-2 hidden md:block" />
                 <div className="flex flex-col">
                   <span className="text-xs text-gray-500">Check-out</span>
                   <span className="text-gray-800 font-medium text-base">
@@ -127,8 +127,8 @@ const HotelSearchComponent = () => {
             </div>
 
             {showDatePicker && (
-              <div className="absolute top-full left-4 right-4 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg z-50 p-4">
-                <div className="grid grid-cols-2 gap-4">
+              <div className="absolute top-full left-0 md:left-4 right-0 md:right-4 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg z-50 p-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Check-in
@@ -165,11 +165,11 @@ const HotelSearchComponent = () => {
           </div>
 
           {/* Guest Counter */}
-          <div className="relative px-4 h-full flex items-center hover:bg-white hover:bg-opacity-70 transition-colors duration-200">
-            <div className="flex items-center gap-3 py-3 min-w-[200px]">
+          <div className="relative md:px-4 h-full flex items-center hover:bg-white hover:bg-opacity-70 transition-colors duration-200">
+            <div className="flex items-center gap-3 py-3 w-full md:min-w-[200px]">
               <Users size={20} className="text-gray-400" />
               <span className="text-xs text-gray-500">Guests</span>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 ml-auto md:ml-0">
                 <button
                   onClick={decrementGuests}
                   className="w-6 h-6 rounded-full cursor-pointer border border-gray-300 flex items-center justify-center hover:border-teal-500 transition-colors duration-200"
@@ -205,7 +205,7 @@ const HotelSearchComponent = () => {
           <div className="h-full flex items-center hover:bg-white hover:bg-opacity-70 transition-colors duration-200 rounded-r-full">
             <button
               onClick={handleSearch}
-              className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-5 rounded-full font-medium transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg h-full text-base"
+              className="bg-teal-600 hover:bg-teal-700 text-white px-8 py-5 rounded-full font-medium transition-all duration-200 flex items-center gap-2 shadow-md hover:shadow-lg h-full text-base w-full md:w-auto justify-center"
             >
               <Search size={20} />
               Search

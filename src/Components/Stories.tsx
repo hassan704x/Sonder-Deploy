@@ -40,13 +40,13 @@ const SonderStories = () => {
     };
 
     return (
-        <div className="bg-orange-50 py-20 px-8">
+        <div className="bg-orange-50 py-20 px-4 md:px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16">
-                    <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-6 leading-tight">
+                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif text-gray-900 mb-6 leading-tight">
                         Sonder stories
                     </h2>
-                    <p className="text-gray-800 text-xl leading-relaxed max-w-3xl">
+                    <p className="text-gray-800 text-lg md:text-xl leading-relaxed max-w-3xl">
                         From the latest news to travel inspiration, learn more about the world of Sonder.
                     </p>
                 </div>
@@ -61,10 +61,10 @@ const SonderStories = () => {
                         >
                             {storySlides.map((slide, slideIndex) => (
                                 <div key={slideIndex} className="w-full flex-shrink-0">
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
                                         {slide.map((story) => (
                                             <div key={story.id} className="group cursor-pointer">
-                                                <div className="relative overflow-hidden mb-6 h-56">
+                                                <div className="relative overflow-hidden mb-6 h-48 md:h-56">
                                                     <Image
                                                         src={story.image}
                                                         alt={story.title}
@@ -74,12 +74,12 @@ const SonderStories = () => {
                                                     />
                                                 </div>
                                                 <div className="space-y-4">
-                                                    <h3 className="text-lg font-normal text-teal-900 leading-snug">
+                                                    <h3 className="text-base md:text-lg font-normal text-teal-900 leading-snug">
                                                         {story.title}
                                                     </h3>
                                                     <a
                                                         href={story.link}
-                                                        className="inline-block text-lg text-teal-900 underline hover:text-teal-700 transition-colors"
+                                                        className="inline-block text-base md:text-lg text-teal-900 underline hover:text-teal-700 transition-colors"
                                                     >
                                                         Continue reading
                                                     </a>
