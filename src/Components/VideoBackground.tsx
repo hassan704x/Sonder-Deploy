@@ -6,7 +6,7 @@ const VideoBackground = () => {
         <div className="relative w-screen h-[90vh] overflow-hidden">
             {/* Video Background */}
             <video
-                src="/video/background-video.mp4"
+                src="/assets/background-video.mp4"
                 className="absolute inset-0 w-full h-full object-cover"
                 autoPlay
                 muted

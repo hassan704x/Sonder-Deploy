@@ -25,7 +25,7 @@ const HeaderTop = () => {
     <div className="sticky top-0 z-50 bg-white shadow-md">
       <div className="flex flex-row items-center justify-between">
         <div className="flex flex-row items-center min-h-[35px] bg-white m-3 gap-6 ml-10">
-          <Image src="/icons/Logo.png" width={124} height={124} alt="Logo" />
+          <Image src="/assets/Logo.png" width={124} height={124} alt="Logo" />
           
           
           <div className={`relative transition-all duration-300 ${

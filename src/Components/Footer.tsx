@@ -9,7 +9,7 @@ const Footer = () => {
         <div className='bg-[#073937] p-20'>
             <div className="pt-10 ">
                 <Image
-                    src="/icons/Logo.png"
+                    src="/assets/Logo.png"
                     width={124}
                     height={124}
                     alt="Logo"

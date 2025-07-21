@@ -45,7 +45,7 @@ const TemplateArea = () => {
                         <div className="flex gap-4">
                             <div className="relative w-35 h-12">
                                 <Image
-                                    src="/icons/playstore.png"
+                                    src="/assets/playstore.png"
                                     alt="Download on Google Play"
                                     fill
                                     className="object-contain"
@@ -53,7 +53,7 @@ const TemplateArea = () => {
                             </div>
                             <div className="relative w-35 h-12">
                                 <Image
-                                    src="/icons/appstore.png"
+                                    src="/assets/appstore.png"
                                     alt="Download on App Store"
                                     fill
                                     className="object-contain"
@@ -78,13 +78,14 @@ const TemplateArea = () => {
                             {/* Video positioned inside phone screen */}
                             <div className="absolute top-[4%] left-[28%] w-[45%] h-[1] z-10 rounded-[1.5rem] overflow-hidden bg-black">
                                 <video
-                                    src="/video/temp-video.mp4"
+                                    src="/assets/temp-video.mp4"
                                     className="w-full h-full object-cover"
                                     controls={false}
                                     autoPlay
                                     muted
                                     loop
                                     playsInline
+                                    preload="metadata"
                                 />
                             </div>
                         </div>
@@ -98,7 +99,7 @@ const TemplateArea = () => {
                         <div className="flex justify-center items-center gap-22 flex-wrap pb-8 pt-12">
                             <div className="relative w-25 h-31">
                                 <Image
-                                    src="/icons/reviews.png"
+                                    src="/assets/reviews.png"
                                     alt="TripAdvisor reviews"
                                     fill
                                     className="object-contain opacity-80"
@@ -106,7 +107,7 @@ const TemplateArea = () => {
                             </div>
                             <div className="relative w-20 h-16">
                                 <Image
-                                    src="/icons/google.png"
+                                    src="/assets/google.png"
                                     alt="Google reviews"
                                     fill
                                     className="object-contain opacity-80"
@@ -114,7 +115,7 @@ const TemplateArea = () => {
                             </div>
                             <div className="relative w-20 h-16">
                                 <Image
-                                    src="/icons/3rd review.png"
+                                    src="/assets/3rd review.png"
                                     alt="Other reviews"
                                     fill
                                     className="object-contain opacity-80"
@@ -133,7 +134,7 @@ const TemplateArea = () => {
                         <div className=" flex items-center justify-center">
                             <div className=" w-24 h-24">
                                 <Image
-                                    src="/icons/down-section-logo.png"
+                                    src="/assets/down-section-logo.png"
                                     width={100}
                                     height={100}
                                     alt="Marriott Bonvoy logo"
