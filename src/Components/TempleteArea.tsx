@@ -78,7 +78,7 @@ const TemplateArea = () => {
                             {/* Video positioned inside phone screen */}
                             <div className="absolute top-[4%] left-[28%] w-[45%] h-[1] z-10 rounded-[1.5rem] overflow-hidden bg-black">
                                 <video
-                                    src="/assets/temp-video.mp4"
+                                    src="/assets/video/temp-video.mp4"
                                     className="w-full h-full object-cover"
                                     controls={false}
                                     autoPlay
