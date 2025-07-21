@@ -27,7 +27,7 @@ const HeaderTop = () => {
         <div className="flex flex-row items-center min-h-[35px] bg-white m-3 gap-6 ml-10">
           <Image src="/icons/Logo.png" width={124} height={124} alt="Logo" />
           
-          {/* Search bar - hidden on lg/xl screens, visible on smaller screens or when scrolled */}
+          
           <div className={`relative transition-all duration-300 ${
             isScrolled ? 'block' : 'lg:hidden xl:hidden'
           }`}>
@@ -52,8 +52,7 @@ const HeaderTop = () => {
                
         <div className="flex flex-row items-center gap-2 mr-10">
           <div className="hover:bg-orange-100 rounded-full hidden md:block">
-            <select
-              className="text-gray-900 text-[18px] appearance-none border-none bg-transparent py-2 px-5 rounded-full focus:outline-none cursor-pointer"
+            <select className="text-gray-900 text-[18px] appearance-none border-none bg-transparent py-2 px-5 rounded-full focus:outline-none cursor-pointer"
               name="currency"
               id="currency"
             >
@@ -67,8 +66,7 @@ const HeaderTop = () => {
           </div>
                  
           <div className="hover:bg-orange-100 rounded-full hidden md:block">
-            <select
-              className="text-gray-900 text-[18px] appearance-none border-none bg-transparent py-2 px-5 rounded-full focus:outline-none cursor-pointer"
+            <select className="text-gray-900 text-[18px] appearance-none border-none bg-transparent py-2 px-5 rounded-full focus:outline-none cursor-pointer"
               name="language"
               id="language"
             >

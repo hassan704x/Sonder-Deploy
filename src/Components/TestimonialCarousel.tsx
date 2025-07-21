@@ -56,14 +56,14 @@ const TestimonialCarousel = () => {
     setCurrentSlide(index);
   };
 
-  const getVisibleTestimonials = () => {
-    const visible = [];
-    for (let i = 0; i < 3; i++) {
-      const index = (currentSlide + i) % testimonials.length;
-      visible.push({ ...testimonials[index], index });
-    }
-    return visible;
-  };
+  // const getVisibleTestimonials = () => {
+  //   const visible = [];
+  //   for (let i = 0; i < 3; i++) {
+  //     const index = (currentSlide + i) % testimonials.length;
+  //     visible.push({ ...testimonials[index], index });
+  //   }
+  //   return visible;
+  // };
 
   return (
     <div className="w-full 7xl mx-auto px-4 py-16 bg" >

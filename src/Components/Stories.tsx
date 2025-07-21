@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useState } from 'react';
+import Image from 'next/image';
 
 const SonderStories = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
@@ -33,38 +33,26 @@ const SonderStories = () => {
                 link: "#"
             }
         ],
-
     ];
 
-    const nextSlide = () => {
-        setCurrentSlide((prev) => (prev + 1) % storySlides.length);
-    };
-
-    const prevSlide = () => {
-        setCurrentSlide((prev) => (prev - 1 + storySlides.length) % storySlides.length);
-    };
-
-    const goToSlide = (index: number) => {
+    const goToSlide = (index:number) => {
         setCurrentSlide(index);
     };
 
-
     return (
-        <div className="bg-[#fcf5eb] py-20 px-8">
+        <div className="bg-orange-50 py-20 px-8">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-16">
                     <h2 className="text-4xl lg:text-5xl font-serif text-gray-900 mb-6 leading-tight">
                         Sonder stories
                     </h2>
-                    <p className="text-gray-800 text-[20px] leading-relaxed max-w-3xl">
+                    <p className="text-gray-800 text-xl leading-relaxed max-w-3xl">
                         From the latest news to travel inspiration, learn more about the world of Sonder.
                     </p>
                 </div>
 
                 {/* Carousel Container */}
                 <div className="relative mb-12">
-
-
                     {/* Stories Grid */}
                     <div className="overflow-hidden">
                         <div
@@ -76,20 +64,22 @@ const SonderStories = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                                         {slide.map((story) => (
                                             <div key={story.id} className="group cursor-pointer">
-                                                <div className="relative overflow-hidden mb-6">
-                                                    <img
+                                                <div className="relative overflow-hidden mb-6 h-56">
+                                                    <Image
                                                         src={story.image}
                                                         alt={story.title}
-                                                        className="w-full h-56 object-cover transition-transform duration-300 group-hover:scale-105"
+                                                        fill
+                                                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                                                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                                     />
                                                 </div>
                                                 <div className="space-y-4">
-                                                    <h3 className="text-[18px] font-[400] text-[#073836] leading-snug ">
+                                                    <h3 className="text-lg font-normal text-teal-900 leading-snug">
                                                         {story.title}
                                                     </h3>
                                                     <a
                                                         href={story.link}
-                                                        className="inline-block text-[18px] text-[#073836] h text-base underline "
+                                                        className="inline-block text-lg text-teal-900 underline hover:text-teal-700 transition-colors"
                                                     >
                                                         Continue reading
                                                     </a>
@@ -109,8 +99,9 @@ const SonderStories = () => {
                         <button
                             key={index}
                             onClick={() => goToSlide(index)}
-                            className={`w-2 h-2 rounded-full transition-colors cursor-pointer duration-200 ${index === currentSlide ? 'bg-gray-600' : 'bg-gray-300'
-                                }`}
+                            className={`w-2 h-2 rounded-full transition-colors cursor-pointer duration-200 ${
+                                index === currentSlide ? 'bg-gray-600' : 'bg-gray-300'
+                            }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />
                     ))}

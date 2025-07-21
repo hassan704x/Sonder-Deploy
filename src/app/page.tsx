@@ -1,6 +1,6 @@
 import HeaderTop from "@/Components/HeaderTop";
 import HeaderSlider from "@/Components/HeaderSlider";
-import Image from "next/image";
+// import Image from "next/image";
 import Locations from "@/Components/Locations";
 import Searchbar from "@/Components/Searchbar";
 import TempleteArea from "@/Components/TempleteArea";
